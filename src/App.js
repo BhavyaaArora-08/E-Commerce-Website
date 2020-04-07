@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Women from "./components/Women";
+import Men from "./components/Men";
+import NavBar from "./components/NavBar";
+import HomePage from "./components/HomePage";
+import Kids from "./components/Kids";
+import Sports from "./components/Sports";
+import My404Component from "./components/My404Component";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <NavBar></NavBar>
+          <Switch>
+            <Route path="/women" exact component={Women}></Route>
+            <Route path="/men" exact component={Men}></Route>
+            <Route path="/kids" exact component={Kids}></Route>
+            <Route path="/sports" exact component={Sports}></Route>
+            <Route path="/" exact component={HomePage}></Route>
+            <Route path="*" exact component={My404Component} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

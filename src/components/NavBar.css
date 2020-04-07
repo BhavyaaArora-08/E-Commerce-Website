@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+#navbody {
+  text-align: center;
+}
+
+#listItem {
+  font-family: "Baloo Paaji 2", cursive;
+  margin-right: 2%;
+  color: #00738f;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+#listItem:hover {
+  color: #00bcd4;
+}
+
+#brand {
+  font-family: "Pacifico", cursive;
+  color: #00bcd4;
+}

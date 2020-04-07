@@ -1,0 +1,18 @@
+#cover {
+  text-align: center;
+}
+
+#img1 {
+  margin-right: 0;
+}
+
+#imgbox {
+  display: grid;
+  height: 100%;
+}
+#center-fit {
+  max-width: 100%;
+  min-height: 90vh;
+  max-height: 110vh;
+  margin: auto;
+}
